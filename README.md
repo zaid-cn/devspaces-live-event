@@ -25,11 +25,27 @@ a set of people who were exposed based on the following criteria.
 - `locations.csv` format is `Time,Person,x,y`
 - `exposure.csv` format is #Time,Person
 - `output.csv` format is `TraceId,Time,Person`. TraceId can be any integer value.
-- A person is `exposed` if they are in an adjacent spot (including diagonals) for at least two consective time intervals
+- A person is `exposed` if they are in an adjacent spot (including diagonals) for at least two consective time intervals with someone who was exposed previously
 - See the example Ruby code for more details. You can run `./trace.rb`
 
 
-
-
 ## Message Decryption Challenge
-todo
+This one is pretty simple, at least in terms of the problem. The input.txt has a decrypted message
+and your job is to decrypt it. It does not use RSA encryption or anything like this.
+It is a reasonable solution that can be found using character manipulation.
+Run `./decrypt.rb` and see the example. Note that you will need to change the code
+to point to the real input.
+
+For convenience, the output of the test example is shown here:
+```
+Note this is the test input. See the real input.txt for this challenge.
+The test uses ceasar cipher with -3 character offset.
+ 
+TEST Input Message
+------------------
+Wklv#lv#d#whvw#phvvdjh
+ 
+Decrypted Content
+-----------------
+This is a test message
+```
