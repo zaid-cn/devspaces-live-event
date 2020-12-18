@@ -10,20 +10,28 @@ OUTPUT_FILE = "output.txt"
 # Read the input message
 # Note: This currently reads the test input.
 #       Your solution will be evaluated using INPUT_FILE
-text = File.read(TEST_INPUT_FILE).chomp
+#text = File.read(TEST_INPUT_FILE).chomp
+# Use this for the real solution
+text = File.read(INPUT_FILE).chomp
 
 #
 # NOTE: This is just the example. The actual solution
 #       for the real input does not use Ceasar Cipher -3
-#       This is shown just for a demonstration.
+#       This is shown as a demonstration.
+#       The actual solution does not use RSA encryption
+#       or something similar.
+#       Hints will be given at 30 minutes and 60 minutes.
+#       You have 90 minutes in total for the hackathon.
 #
 decrypted_text = ceasar_cipher_decrypt(text, -3)
 
 # Write the decrypted message to the output file
 File.open(OUTPUT_FILE, "w") { |f| f.write decrypted_text }
 
+#
 # Display the results. This is just for information.
-# Your solution will be based on the content of OUTPUT_FILE
+# Your solution will be based on the contents of OUTPUT_FILE
+#
 5.times do 
     puts " "
 end
