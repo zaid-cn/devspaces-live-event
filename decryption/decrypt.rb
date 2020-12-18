@@ -10,16 +10,17 @@ OUTPUT_FILE = "output.txt"
 # Read the input message
 # Note: This currently reads the test input.
 #       Your solution will be evaluated using INPUT_FILE
-#text = File.read(TEST_INPUT_FILE).chomp
+text = File.read(TEST_INPUT_FILE).chomp
 # Use this for the real solution
-text = File.read(INPUT_FILE).chomp
+#text = File.read(INPUT_FILE).chomp
 
 #
 # NOTE: This is just the example. The actual solution
 #       for the real input does not use Ceasar Cipher -3
 #       This is shown as a demonstration.
 #       The actual solution does not use RSA encryption
-#       or something similar.
+#       or something similar. The order of magnitude
+#       complexity is on part with the test example shown.
 #       Hints will be given at 30 minutes and 60 minutes.
 #       You have 90 minutes in total for the hackathon.
 #
