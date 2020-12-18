@@ -23,6 +23,10 @@ text = File.read(INPUT_FILE).chomp
 #       Hints will be given at 30 minutes and 60 minutes.
 #       You have 90 minutes in total for the hackathon.
 #
+#       The following article discusses techniques for
+#       solving problems like this.
+#       https://tinyurl.com/y7grbrs4
+#
 decrypted_text = ceasar_cipher_decrypt(text, -3)
 
 # Write the decrypted message to the output file
