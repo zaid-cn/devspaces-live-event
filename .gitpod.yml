@@ -1,2 +1,5 @@
 tasks:
   - command: cd contact-tracing && bundle install
+    name: Ruby
+  - command: ./build_java.sh && ./run_java_app.sh
+    name: Java
