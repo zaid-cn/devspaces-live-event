@@ -10,7 +10,7 @@ INPUT_LOCATIONS_FILE = "locations.csv"
 EXPOSURE_REPORTS_FILE = "exposure.csv"
 
 #TraceId,Time,Person
-OUTPUT_FILE = "results.csv"
+OUTPUT_FILE = "output.csv"
 
 # Our world is a 10x10 grid
 SIZE_OF_WORLD = 10
@@ -62,12 +62,21 @@ File.readlines(INPUT_LOCATIONS_FILE).each do |line|
     if time == current_time
         current_locations << person_location
     else
+        # The next two lines are for debugging and demo purposes
         draw_person_map(current_locations)
         sleep 2
+
         current_time = time
         current_locations = []
         current_locations << person_location
     end
 end
 
+# Make sure to display the last time series
 draw_person_map(current_locations)
+
+puts " "
+puts cyan "Exposures were: (Time,Person)"
+puts File.read(EXPOSURE_REPORTS_FILE)
+puts cyan "The expected results were: (TraceId,Time,Person)"
+puts File.read(OUTPUT_FILE)
