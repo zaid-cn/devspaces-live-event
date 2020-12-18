@@ -24,7 +24,7 @@ a set of people who were exposed based on the following criteria.
 - Time is noted as an increasing integer series, i.e. `t=1`, `t=2`, etc.
 - `locations.csv` format is `Time,Person,x,y`
 - `exposure.csv` format is #Time,Person
-- `output.csv` format is `TraceId,Time,Person`. TraceId can be any integer value.
+- `output.csv` format is `TraceId,Time,Person`. TraceId can be any integer value. Only the first exposure (two consecutive time periods) needs to be noted in this file.
 - A person is `exposed` if they are in an adjacent spot (including diagonals) for at least two consective time intervals with someone who was exposed previously
 - See the example Ruby code for more details. You can run `./trace.rb`
 
