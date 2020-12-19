@@ -82,9 +82,11 @@ public class App {
     }
 
     static boolean abcd(List<String> a, List<String> b) {
-        a.retainAll(b);
-        if(a.size() > 0)
-            return true;
+        HashSet<String> hs = new HashSet<String>(a);
+        for (String s: b){
+            if (hs.contains(s));
+                return true;
+        }
         return false;
     }
 }
